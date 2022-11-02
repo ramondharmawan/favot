@@ -4,4 +4,5 @@ class Strings {
   String loginDescription = "Crowdvoting and Crowdfunding for your Events ";
   String loginWithGoogle = "Login with Google";
   String loginWithApple = "Login with Apple ID";
+  String registerWithEmail = "Register with Email";
 }

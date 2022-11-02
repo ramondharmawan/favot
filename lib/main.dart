@@ -1,3 +1,4 @@
+import 'package:favoting/register_page.dart';
 import 'package:favoting/view/login_page.dart';
 import 'package:favoting/view/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const SplashScreen(),
         "login_screen": (context) => const LoginPage(),
+        RegisterPage.route: (context) => const RegisterPage(),
       },
     );
   }

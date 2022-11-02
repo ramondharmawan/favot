@@ -1,4 +1,5 @@
 import 'package:favoting/constants/r.dart';
+import 'package:favoting/register_page.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const Spacer(),
             ButtonLogin(
+              onTap: () {},
               backgroundColor: Colors.white,
               borderColor: R.colors.primary,
               child: Row(
@@ -72,6 +74,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             ButtonLogin(
+              onTap: () {},
               backgroundColor: Colors.black,
               borderColor: Colors.black,
               child: Row(
@@ -81,6 +84,28 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(width: 15),
                   Text(
                     R.strings.loginWithApple,
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: R.colors.whiteLogin,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ButtonLogin(
+              onTap: () {
+                Navigator.of(context).pushNamed(RegisterPage.route);
+              },
+              backgroundColor: R.colors.primary,
+              borderColor: R.colors.primary,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(R.assets.icEmail),
+                  const SizedBox(width: 15),
+                  Text(
+                    R.strings.registerWithEmail,
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
@@ -103,11 +128,13 @@ class ButtonLogin extends StatelessWidget {
     required this.backgroundColor,
     required this.child,
     required this.borderColor,
+    required this.onTap,
   }) : super(key: key);
 
   final Color backgroundColor;
   final Widget child;
   final Color borderColor;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +150,7 @@ class ButtonLogin extends StatelessWidget {
           elevation: 0,
           backgroundColor: backgroundColor,
         ),
-        onPressed: () {},
+        onPressed: onTap,
         child: child,
       ),
     );
