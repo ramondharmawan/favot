@@ -1,5 +1,7 @@
 import 'package:favoting/register_page.dart';
+import 'package:favoting/view/dashboard.dart';
 import 'package:favoting/view/login_page.dart';
+import 'package:favoting/view/onboarding_screen.dart';
 import 'package:favoting/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +35,8 @@ class MyApp extends StatelessWidget {
         "/": (context) => const SplashScreen(),
         "login_screen": (context) => const LoginPage(),
         RegisterPage.route: (context) => const RegisterPage(),
+        OnBoarding.route: (context) => const OnBoarding(),
+        "dashboard_screen": (context) => const DashboardScreen(),
       },
     );
   }
