@@ -1,5 +1,5 @@
 import 'package:favoting/constants/r.dart';
-import 'package:favoting/register_page.dart';
+import 'package:favoting/view/register_page.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
